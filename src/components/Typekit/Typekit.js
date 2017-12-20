@@ -1,12 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-
 const TypekitScript = () => (
     <script>{`
         (function(d) {
             var config = {
-                kitId: 'qru3ayc',
+                kitId: 'your-kit-id',
                 scriptTimeout: 3000,
                 async: true
             },

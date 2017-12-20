@@ -1,4 +1,4 @@
-# Gatsby Stater Skeleton
+# 🗝 Gatsby Stater Skeleton
 A starter kit for Gatsby site with a minimum amount of configuration but some opinionated choices.
 
 Contains the following Gatsby plugins 
@@ -7,3 +7,8 @@ Contains the following Gatsby plugins
 * gatsby-plugin-react-helmet
 * gatsby-plugin-sitemap
 * gatsby-remark-copy-linked-files
+
+Other additions
+* Normalize.css
+* SEO header
+* Site config file for global configuration

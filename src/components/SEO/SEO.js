@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { colorScheme } from '../../helpers/styleSettings';
-import config from '../../../data/site-config';
+import config from '../../../site-config/';
 
 const SEO = (props) => {
     const { post } = props;
