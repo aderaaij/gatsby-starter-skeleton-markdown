@@ -1,5 +1,4 @@
 import React from 'react';
-import styled, { css } from 'react-emotion';
 import SEO from '../components/SEO/SEO';
 import config from '../../site-config/';
 
