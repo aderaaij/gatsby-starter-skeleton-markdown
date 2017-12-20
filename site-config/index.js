@@ -1,15 +1,17 @@
 module.exports = {
-    siteName: 'Gatsby Starter Skeleton',
-    siteLogo: '/logo/logo_space.png',
-    siteUrl: 'https://www.yoursite.com', // No trailing slash!
-    siteTitle: 'Gatsby Starter Skeleton',
-    siteDescription: 'A starter skeleton for Gatsby',
-    siteLanguage: 'en_US',
-    siteColor: '#ffffff',
+    meta: {
+        siteName: 'Gatsby Starter Skeleton',
+        siteLogo: '/logo/logo_space.png',
+        siteUrl: 'https://site.example.notatld', // No trailing slash!
+        siteTitle: 'Gatsby Starter Skeleton',
+        siteDescription: 'A starter skeleton for Gatsby',
+        siteLanguage: 'en_US',
+        siteColor: '#ffffff',
+    },
     typekitID: '',
-    faviconDir: '/favicons/', // If you want to add favicons, generate them at https://realfavicongenerator.net/
+    faviconDir: 'favicons', // Add directory name without / slashes.
     contact: {
-        twitter: '',
+        twitter: 'test',
         facebook: '',
         email: 'test@test.test',
     },
