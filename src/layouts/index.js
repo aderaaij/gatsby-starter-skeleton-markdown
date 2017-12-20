@@ -3,8 +3,9 @@ import Helmet from 'react-helmet';
 import { injectGlobal } from 'emotion';
 import 'normalize.css';
 import config from '../../site-config/';
-import Piwik from '../components/Piwik/Piwik';
-import Typekit from '../components/Typekit/Typekit';
+import Head from '../components/Head/Head';
+import Typekit from '../components/Head/Typekit';
+import Piwik from '../components/Head/Piwik';
 
 injectGlobal`
     * {
@@ -14,12 +15,10 @@ injectGlobal`
 
 const TemplateWrapper = ({ children }) => (
     <div>
-        <Helmet
-            title={config.siteDescription}
-            htmlAttributes={{ lang: 'EN' }}
-        />
-        <Piwik />
-        <Typekit />
+        <Head />
+        {config.typekitID &&
+            <Typekit id={config.typekitID} />
+        }
         {children()}
     </div>
 );
