@@ -1,37 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../../site-config/';
 
-const SEO = (props) => {
-    const { post } = props;
-    const { siteLinks } = config;
-
+const SEO = () => {
     let currentTitle;
     let currentDescription;
     let currentImage;
     let currentUrl;
-    let pageTitle;
 
-    if (post) {
-        pageTitle = post.frontmatter.title;
-        currentTitle = `${pageTitle} | ${config.siteName}`;
-        currentDescription = post.excerpt;
-        if (post.frontmatter.cover) {
-            currentImage = `${config.siteUrl}${post.frontmatter.cover.childImageSharp.resolutions.src}`;
-        } else {
-            currentImage = config.siteUrl + config.siteLogo;
-        }
-        currentUrl = `${config.siteUrl}${post.fields.slug}`;
-    } else {
+    if (config) {
         currentDescription = config.siteDescription;
         currentTitle = config.siteTitle;
         currentUrl = config.siteUrl;
         currentImage = config.siteUrl + config.siteLogo;
     }
+
     return (
         <Helmet>
             <title>{currentTitle}</title>
-
             {/* standard meta stuff */}
             <meta name="description" content={currentDescription} />
             <meta name="image" content={currentImage} />
@@ -51,7 +37,9 @@ const SEO = (props) => {
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:description" content={currentDescription} />
             <meta name="twitter:title" content={currentTitle} />
-            <meta name="twitter:site" content={`@${siteLinks.Twitter.handle}`} />
+            {config.contact.twitter &&
+            <meta name="twitter:site" content={`@${config.contact.twitter}`} />
+            }
             <meta name="twitter:image" content={currentImage} />
 
             {/* Icon Stuff */}
@@ -61,7 +49,8 @@ const SEO = (props) => {
             <link rel="mask-icon" href={`${config.siteUrl}/favicons/safari-pinned-tab.svg`} color="#5bbad5" />
             <link rel="shortcut icon" href={`${config.siteUrl}/favicons/favicon.ico`} />
             <meta name="msapplication-config" content={`${config.siteUrl}/favicons/browserconfig.xml`} />
-            <meta name="theme-color" content={colorScheme.support} />
+
+            <meta name="theme-color" content={config.siteColor} />
         </Helmet>
     );
 };
