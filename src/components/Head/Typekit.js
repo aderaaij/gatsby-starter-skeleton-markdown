@@ -27,4 +27,3 @@ export default Typekit;
 TypekitScript.propTypes = {
     id: PropTypes.string.isRequired,
 };
-
