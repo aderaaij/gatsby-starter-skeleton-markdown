@@ -6,10 +6,10 @@ const TwitterCard = props => (
     <Helmet>
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content={props.siteDescription} />
-        <meta name="twitter:title" content={props.siteTitle} />
+        <meta name="twitter:description" content={props.meta.description} />
+        <meta name="twitter:title" content={props.meta.title} />
         <meta name="twitter:site" content={`@${config.contact.twitter}`} />
-        <meta name="twitter:image" content={props.siteLogo} />
+        <meta name="twitter:image" content={props.meta.image} />
     </Helmet>
 );
 
