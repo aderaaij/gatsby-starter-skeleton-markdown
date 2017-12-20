@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import config from '../../../site-config/';
 
 const TwitterCard = props => (
@@ -14,3 +15,7 @@ const TwitterCard = props => (
 );
 
 export default TwitterCard;
+
+TwitterCard.propTypes = {
+    meta: PropTypes.object.isRequired,
+};

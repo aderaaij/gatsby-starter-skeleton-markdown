@@ -6,9 +6,6 @@ import TwitterCard from './TwitterCard';
 import OGMeta from './OGMeta';
 
 const SEO = () => {
-    let currentTitle;
-    let currentDescription;
-    let currentImage;
     const meta = {
         locale: config.meta.siteLanguage,
         siteName: config.meta.siteName,
@@ -25,7 +22,7 @@ const SEO = () => {
     return (
         <div>
             <Helmet>
-                <title>{currentTitle}</title>
+                <title>{meta.title}</title>
                 {/* standard meta stuff */}
                 <meta name="description" content={meta.description} />
                 <meta name="image" content={meta.image} />
@@ -44,10 +41,3 @@ const SEO = () => {
 };
 
 export default SEO;
-
-SEO.defaultProps = {
-    currentDescription: config.meta.siteDescription,
-    currentTitle: config.meta.siteTitle,
-    currentUrl: config.meta.siteUrl,
-    currentImage: config.meta.siteUrl + config.siteLogo,
-};

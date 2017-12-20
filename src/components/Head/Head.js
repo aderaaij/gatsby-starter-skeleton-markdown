@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import config from '../../../site-config/';
 import Typekit from './Typekit';
 
-const Head = props => (
+const Head = () => (
     <div>
         <Helmet
             title={config.siteDescription}

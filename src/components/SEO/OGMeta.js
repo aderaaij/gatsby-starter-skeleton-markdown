@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
 const OGMeta = props => (
     <Helmet>
@@ -16,3 +17,8 @@ const OGMeta = props => (
 );
 
 export default OGMeta;
+
+
+OGMeta.propTypes = {
+    meta: PropTypes.object.isRequired,
+};
