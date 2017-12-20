@@ -1,6 +1,6 @@
 {
-  "name": "ardennl-gatsby-site",
-  "description": "Arden.nl wesbiste made in Gatsby",
+  "name": "gatsby-starter-skeleton",
+  "description": "A barebone-ish starter for Gatsby",
   "version": "1.0.0",
   "author": "Arden de Raaij <a.de.raaij@gmail.com>",
   "dependencies": {
