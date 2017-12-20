@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-const TypekitScript = () => (
+const TypekitScript = props => (
     <script>{`
         (function(d) {
             var config = {
-                kitId: 'your-kit-id',
+                kitId: '${props.id}',
                 scriptTimeout: 3000,
                 async: true
             },
@@ -15,10 +16,15 @@ const TypekitScript = () => (
     </script>
 );
 
-const Typekit = () => (
+const Typekit = props => (
     <Helmet>
-        {TypekitScript()}
+        {TypekitScript(props)}
     </Helmet>
 );
 
 export default Typekit;
+
+TypekitScript.propTypes = {
+    id: PropTypes.string.isRequired,
+};
+
