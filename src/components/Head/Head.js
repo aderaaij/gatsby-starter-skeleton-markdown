@@ -7,8 +7,7 @@ import Favicons from './Favicons';
 const Head = () => (
     <div>
         <Helmet
-            title={config.siteDescription}
-            htmlAttributes={{ lang: 'EN' }}
+            htmlAttributes={{ lang: 'en' }}
         />
         {config.typekitID &&
             <Typekit id={config.typekitID} />
