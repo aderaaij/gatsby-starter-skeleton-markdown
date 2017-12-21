@@ -11,6 +11,17 @@ Default plugins:
 * gatsby-plugin-sitemap
 
 Other additions
+* Global site-config file
 * Normalize.css
-* SEO header
-* Site config file for global configuration
+* Header Component
+* SEO Component
+* TypeKit integration (optional)
+* Opinionated ESLint configuration
+
+## Getting started
+
+### Install
+You can clone this repository to a local folder and run `yarn install` to install all dependencies and `yarn develop` to start developing. It's recommended that you install GatsbyJS globally beforehand. In that case you can also install by using the following command: `gatsby new blog https://github.com/aderaaij/gatsby-starter-skeleton.git`. Now you're set!
+
+### Config
+Now you're all set-up you should have a look at the `/site-config/index.js`. This is where you can set up some global values like your sites title, description and all that jazz. This config file is used in all the components in the `components/Head` and `components/SEO` folder. 
