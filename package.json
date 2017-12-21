@@ -29,7 +29,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build && gatsby serve",
-    "develop": "gatsby develop --host localhost --port 8000",
+    "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
