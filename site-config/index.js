@@ -8,10 +8,16 @@ module.exports = {
         siteLanguage: 'en_US',
         siteColor: '#ffffff',
     },
-    typekitID: '', // Optional
-    faviconDir: '/favicons', // Optional, No trailing slash!
+    // Typekit ID to autoload Typekit script in header.
+    // Optional
+    typekitID: '',
+    // Where are your Favicons at?
+    // Optional
+    faviconDir: '/favicons',
     contact: {
-        twitter: 'test', // Needed if you want to add a 'twitter card' in your head section
+        // Needed if you want to add a 'twitter card' in your head section.
+        // Add without '@'
+        twitter: 'test',
         facebook: '',
         email: 'test@test.test',
     },
