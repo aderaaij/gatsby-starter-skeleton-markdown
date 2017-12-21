@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../../site-config/';
-import Favicons from './Favicons';
 import TwitterCard from './TwitterCard';
 import OGMeta from './OGMeta';
 
@@ -30,9 +29,6 @@ const SEO = () => {
                 <meta name="theme-color" content={meta.siteColor} />
             </Helmet>
             <OGMeta meta={meta} />
-            {config.faviconDir &&
-            <Favicons meta={meta} />
-            }
             {config.contact.twitter &&
             <TwitterCard meta={meta} />
             }
