@@ -1,4 +1,4 @@
-# 🗝 Gatsby Stater Skeleton
+# 🗝 Gatsby Starter Skeleton
 A starter kit for Gatsby site with a minimum amount of configuration but some opinionated choices.
 
 Contains the following Gatsby plugins 
