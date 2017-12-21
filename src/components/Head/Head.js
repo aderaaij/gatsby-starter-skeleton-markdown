@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../../site-config/';
 import Typekit from './Typekit';
+import Favicons from './Favicons';
 
 const Head = () => (
     <div>
@@ -11,6 +12,10 @@ const Head = () => (
         />
         {config.typekitID &&
             <Typekit id={config.typekitID} />
+        }
+
+        {config.faviconDir &&
+            <Favicons dir={config.faviconDir} />
         }
     </div>
 );
