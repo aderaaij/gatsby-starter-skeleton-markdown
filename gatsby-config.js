@@ -2,7 +2,7 @@ const config = require('./site-config/');
 
 module.exports = {
     siteMetadata: {
-        title: 'Gatsby ',
+        title: config.siteTitle,
         siteUrl: config.siteUrl,
     },
     plugins: [
