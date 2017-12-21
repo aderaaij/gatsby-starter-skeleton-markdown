@@ -8,10 +8,10 @@ module.exports = {
         siteLanguage: 'en_US',
         siteColor: '#ffffff',
     },
-    typekitID: '',
-    faviconDir: 'favicons', // Add directory name without / slashes.
+    typekitID: '', // Optional
+    faviconDir: '/favicons', // Optional, No trailing slash!
     contact: {
-        twitter: 'test',
+        twitter: 'test', // Needed if you want to add a 'twitter card' in your head section
         facebook: '',
         email: 'test@test.test',
     },
