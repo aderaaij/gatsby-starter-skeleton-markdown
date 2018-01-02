@@ -1,7 +1,7 @@
 ---
 title: "I Should've stayed in bed"
 date: "2018-01-01"
-cover: ./ca.png
+cover: ./mike-enerio-33578.jpg
 category: "personal"
 tags:
     - resolutions
