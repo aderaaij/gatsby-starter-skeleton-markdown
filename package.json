@@ -14,6 +14,7 @@
     "gatsby-plugin-sharp": "^1.6.22",
     "gatsby-plugin-sitemap": "^1.2.6",
     "gatsby-source-filesystem": "^1.5.9",
+    "gatsby-transformer-remark": "^1.7.26",
     "gatsby-transformer-sharp": "^1.6.15",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.6.0",
