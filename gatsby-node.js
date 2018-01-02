@@ -1,7 +1,114 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
+const _ = require('lodash');
+const webpackLodashPlugin = require('lodash-webpack-plugin');
 
-// You can delete this file if you're not using it
+const postNodes = [];
+
+exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
+    const { createNodeField } = boundActionCreators;
+    let slug;
+    if (node.internal.type === 'MarkdownRemark') {
+        const fileNode = getNode(node.parent);
+        const parsedFilePath = path.parse(fileNode.relativePath);
+        if (
+            Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+                Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
+        ) {
+            slug = `/${_.kebabCase(node.frontmatter.title)}`;
+        } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
+            slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+        } else if (parsedFilePath.dir === '') {
+            slug = `/${parsedFilePath.name}/`;
+        } else {
+            slug = `/${parsedFilePath.dir}/`;
+        }
+        if (
+            Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+                Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
+        ) {
+            slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+        }
+        createNodeField({ node, name: 'slug', value: slug });
+        postNodes.push(node);
+    }
+};
+
+exports.createPages = ({ graphql, boundActionCreators }) => {
+    const { createPage } = boundActionCreators;
+    return new Promise((resolve, reject) => {
+        graphql(`
+            {
+                allMarkdownRemark {
+                    edges {
+                        node {
+                            frontmatter {
+                                tags
+                                category
+                                published
+                            }
+                            fields {
+                                slug
+                            }
+                        }
+                    }
+                }
+            }
+      `).then((result) => {
+            if (result.errors) {
+                console.log(result.errors);
+                reject(result.errors);
+            }
+            const tagSet = new Set();
+            const categorySet = new Set();
+            result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+                if (node.frontmatter.tags) {
+                    node.frontmatter.tags.forEach((tag) => {
+                        tagSet.add(tag);
+                    });
+                }
+
+                if (node.frontmatter.category) {
+                    categorySet.add(node.frontmatter.category);
+                }
+
+                createPage({
+                    path: node.fields.slug,
+                    component: path.resolve('./src/templates/post.js'),
+                    context: {
+                        // Data passed to context is available in page queries as GraphQL variables.
+                        slug: node.fields.slug,
+                    },
+                });
+
+                const tagList = Array.from(tagSet);
+                tagList.forEach((tag) => {
+                    createPage({
+                        path: `/tags/${_.kebabCase(tag)}/`,
+                        component: path.resolve('./src/templates/tag.js'),
+                        context: {
+                            tag,
+                        },
+                    });
+                });
+
+                const categoryList = Array.from(categorySet);
+                categoryList.forEach((category) => {
+                    createPage({
+                        path: `/categories/${_.kebabCase(category)}/`,
+                        component: path.resolve('./src/templates/category.js'),
+                        context: {
+                            category,
+                        },
+                    });
+                });
+            });
+            resolve();
+        });
+    });
+};
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+    if (stage === 'build-javascript') {
+        config.plugin('Lodash', webpackLodashPlugin, null);
+    }
+};
