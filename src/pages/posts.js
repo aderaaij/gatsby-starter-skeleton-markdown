@@ -14,7 +14,7 @@ const BlogList = (props) => {
         <div>
             <SEO />
             <Helmet>
-                <title>{`Blog | ${config.siteName}`}</title>
+                <title>{`Blog | ${config.meta.siteName}`}</title>
                 <link rel="canonical" href={`${config.siteUrl}/about/`} />
             </Helmet>
             <PostsList edges={edges} />
