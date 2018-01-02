@@ -4,13 +4,18 @@ import config from '../../../site-config/';
 import TwitterCard from './TwitterCard';
 import OGMeta from './OGMeta';
 
-const SEO = () => {
+const SEO = (props) => {
     const meta = {
         locale: config.meta.siteLanguage,
         siteName: config.meta.siteName,
     };
 
-    if (config) {
+    if (props.post) {
+        meta.description = props.post.excerpt;
+        meta.title = props.post.frontmatter.title;
+        meta.image = props.post.frontmatter.image;
+        meta.url = config.meta.siteUrl;
+    } else if (config) {
         meta.description = config.meta.siteDescription;
         meta.title = config.meta.siteTitle;
         meta.image = config.meta.siteUrl + config.meta.siteLogo;
