@@ -12,8 +12,6 @@ const TemplateWrapper = ({ children }) => (
         <nav>
             <ul>
                 <li><Link to="posts">Posts</Link></li>
-                <li />
-                <li />
             </ul>
         </nav>
         {children()}
