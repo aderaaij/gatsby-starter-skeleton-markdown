@@ -5,7 +5,7 @@ import config from '../../site-config/';
 const Home = () => (
     <div>
         <SEO />
-        <h1>{config.meta.siteTitle}</h1>
+        <h2>{config.meta.siteName} homepage</h2>
         <p>{config.meta.siteDescription}</p>
     </div>
 );
