@@ -80,27 +80,27 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     },
                 });
 
-                const tagList = Array.from(tagSet);
-                tagList.forEach((tag) => {
-                    createPage({
-                        path: `/tags/${_.kebabCase(tag)}/`,
-                        component: path.resolve('./src/templates/tag.js'),
-                        context: {
-                            tag,
-                        },
-                    });
-                });
+                // const tagList = Array.from(tagSet);
+                // tagList.forEach((tag) => {
+                //     createPage({
+                //         path: `/tags/${_.kebabCase(tag)}/`,
+                //         component: path.resolve('./src/templates/tag.js'),
+                //         context: {
+                //             tag,
+                //         },
+                //     });
+                // });
 
-                const categoryList = Array.from(categorySet);
-                categoryList.forEach((category) => {
-                    createPage({
-                        path: `/categories/${_.kebabCase(category)}/`,
-                        component: path.resolve('./src/templates/category.js'),
-                        context: {
-                            category,
-                        },
-                    });
-                });
+                // const categoryList = Array.from(categorySet);
+                // categoryList.forEach((category) => {
+                //     createPage({
+                //         path: `/categories/${_.kebabCase(category)}/`,
+                //         component: path.resolve('./src/templates/category.js'),
+                //         context: {
+                //             category,
+                //         },
+                //     });
+                // });
             });
             resolve();
         });
