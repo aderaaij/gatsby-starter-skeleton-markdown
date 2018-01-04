@@ -16,13 +16,11 @@ export const archiveQuery = graphql`
                 relativePath
                 childImageSharp {
                     resolutions(
-                        width: 1200,
-                        traceSVG: {
-                            color: "#37474F",
-                            blackOnWhite: false,
-                        }
+                        width: 250, height: 250
                     ) {
                         tracedSVG
+                        src
+                        srcSet
                     }
                 }
             }
