@@ -8,12 +8,12 @@ import '../graphql/archive';
 
 const TagTemplate = (props) => {
     const { edges } = props.data.allMarkdownRemark;
-    const { category } = props.pathContext;
+    const { tag } = props.pathContext;
     return (
         <div>
             <SEO />
             <Helmet>
-                <title>{`Posts tagged with '${category}'  | ${config.meta.siteName}`}</title>
+                <title>{`Posts tagged with '${tag}'  | ${config.meta.siteName}`}</title>
                 <link rel="canonical" href={`${config.siteUrl}/about/`} />
             </Helmet>
             <PostsList edges={edges} />
