@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import Link, { navigateTo } from 'gatsby-link';
 
 const PostExcerpt = (props) => {
@@ -7,15 +8,17 @@ const PostExcerpt = (props) => {
     const {
         tags, date, path, title, category, excerpt, published, cover,
     } = props.postInfo;
+    console.log(cover.childImageSharp.resolutions);
     return (
-        <article style={{ margin: '40px 0' }}>
+        <article style={{ margin: '40px 0', paddingBottom: 20, borderBottom: '1px solid #999' }}>
 
             {!published &&
-            <span>unpublished</span>
+            <strong>unpublished</strong>
             }
             <h2>
                 <Link to={path}>{title}</Link>
             </h2>
+            <Img style={{ width: 250, height: 250 }} resolutions={cover.childImageSharp.resolutions} />
             <p>{excerpt}</p>
             {(tags || date) &&
             <div>
