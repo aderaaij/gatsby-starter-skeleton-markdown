@@ -5,4 +5,4 @@ public/
 yarn-error.log
 .env
 .vscode
-.eslint
+.eslintrc
