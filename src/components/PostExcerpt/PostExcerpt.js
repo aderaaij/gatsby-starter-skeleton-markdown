@@ -4,11 +4,9 @@ import Img from 'gatsby-image';
 import Link, { navigateTo } from 'gatsby-link';
 
 const PostExcerpt = (props) => {
-    // const { postInfo } = props;
     const {
         tags, date, path, title, category, excerpt, published, cover,
     } = props.postInfo;
-    console.log(cover.childImageSharp.resolutions);
     return (
         <article style={{ margin: '40px 0', paddingBottom: 20, borderBottom: '1px solid #999' }}>
 
@@ -18,6 +16,7 @@ const PostExcerpt = (props) => {
             <h2>
                 <Link to={path}>{title}</Link>
             </h2>
+            <span>date: {date}</span>
             <Img style={{ width: 250, height: 250 }} resolutions={cover.childImageSharp.resolutions} />
             <p>{excerpt}</p>
             {(tags || date) &&
@@ -35,7 +34,6 @@ const PostExcerpt = (props) => {
                     ))}
                     </ul>
                 </div>
-                <span>date: {date}</span>
             </div>
             }
 
