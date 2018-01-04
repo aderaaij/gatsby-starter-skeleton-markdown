@@ -4,7 +4,7 @@ date: "2018-01-02"
 cover: ./mike-enerio-33578.jpg
 category: "personal"
 tags:
-    - personal
+    - bed
     - story
 published: true
 ---

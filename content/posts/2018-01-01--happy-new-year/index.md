@@ -2,7 +2,7 @@
 title: "Happy New Year!"
 date: "2018-01-01"
 cover: ./mike-enerio-33578.jpg
-category: "personal"
+category: "development"
 tags:
     - resolutions
     - '2018'
