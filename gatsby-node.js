@@ -91,16 +91,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 //     });
                 // });
 
-                // const categoryList = Array.from(categorySet);
-                // categoryList.forEach((category) => {
-                //     createPage({
-                //         path: `/categories/${_.kebabCase(category)}/`,
-                //         component: path.resolve('./src/templates/category.js'),
-                //         context: {
-                //             category,
-                //         },
-                //     });
-                // });
+                const categoryList = Array.from(categorySet);
+                categoryList.forEach((category) => {
+                    createPage({
+                        path: `/categories/${_.kebabCase(category)}/`,
+                        component: path.resolve('./src/templates/category.js'),
+                        context: {
+                            category,
+                        },
+                    });
+                });
             });
             resolve();
         });
