@@ -15,12 +15,8 @@ fragment postQuery on MarkdownRemark {
         cover {
             id
             childImageSharp {
-                resolutions(
-                    width: 1200,
-                    traceSVG: {
-                        color: "#37474F",
-                        blackOnWhite: false,
-                    }
+                sizes(
+                    maxWidth: 1200,
                 ) {
                     tracedSVG
                     aspectRatio
