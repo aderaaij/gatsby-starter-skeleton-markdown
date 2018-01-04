@@ -3744,7 +3744,7 @@ gatsby-transformer-remark@^1.7.26:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby-transformer-sharp@^1.6.15:
+gatsby-transformer-sharp@^1.6.16:
   version "1.6.16"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.16.tgz#16464dcfbb2099f49805b2e244da0b3fea63b88e"
   dependencies:
