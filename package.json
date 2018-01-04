@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-skeleton",
-  "description": "A barebone-ish starter for Gatsby",
+  "name": "gatsby-starter-skeleton-markdown",
+  "description": "A barebone-ish starter for Gatsby with Markdown support",
   "version": "1.0.0",
   "author": "Arden de Raaij <a.de.raaij@gmail.com>",
   "dependencies": {
