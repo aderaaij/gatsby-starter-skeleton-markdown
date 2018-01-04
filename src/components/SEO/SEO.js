@@ -1,20 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import config from '../../../site-config/';
 import TwitterCard from './TwitterCard';
 import OGMeta from './OGMeta';
 
 const SEO = (props) => {
+    const { post } = props;
     const meta = {
         locale: config.meta.siteLanguage,
         siteName: config.meta.siteName,
     };
 
-    if (props.post) {
+    if (post) {
+        const { frontmatter } = post;
         meta.description = props.post.excerpt;
-        meta.title = props.post.frontmatter.title;
-        meta.image = props.post.frontmatter.image;
-        meta.url = config.meta.siteUrl;
+        meta.title = `${frontmatter.title} | ${config.meta.siteTitle}`;
+        if (frontmatter.cover) {
+            meta.image = frontmatter.cover.childImageSharp.sizes.src;
+        } else {
+            meta.image = config.meta.siteUrl + config.meta.siteLogo;
+        }
+        meta.url = config.meta.siteUrl + props.post.fields.slug;
     } else if (config) {
         meta.description = config.meta.siteDescription;
         meta.title = config.meta.siteTitle;
@@ -39,6 +46,10 @@ const SEO = (props) => {
             }
         </div>
     );
+};
+
+SEO.propTypes = {
+    post: PropTypes.object,
 };
 
 export default SEO;
