@@ -6,7 +6,6 @@ category: "personal"
 tags:
     - resolutions
     - '2018'
-    - story
 published: false
 ---
 

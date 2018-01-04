@@ -4,8 +4,7 @@ date: "2018-01-02"
 cover: ./mike-enerio-33578.jpg
 category: "personal"
 tags:
-    - resolutions
-    - '2018'
+    - personal
     - story
 published: true
 ---
