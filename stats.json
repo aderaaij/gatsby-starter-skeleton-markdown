@@ -21,8 +21,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-7a8c5e27923944cd8b38.js",
-      "component---src-layouts-index-js-7a8c5e27923944cd8b38.js.map"
+      "component---src-layouts-index-js-75d17c1023626f24a298.js",
+      "component---src-layouts-index-js-75d17c1023626f24a298.js.map"
     ],
     "component---src-templates-tag-js": [
       "component---src-templates-tag-js-942dfdaa219ba71b4eca.js",
@@ -81,9 +81,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-ca98f9cdf2adef3a71a4.js",
+      "app-a88ec6b191c75f1158c4.js",
       "build-js-styles.css",
-      "app-ca98f9cdf2adef3a71a4.js.map",
+      "app-a88ec6b191c75f1158c4.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
