@@ -1,11 +1,11 @@
 const config = require('./site-config/');
 
 module.exports = {
+    pathPrefix: '/gatsby-starter-skeleton-markdown',
     siteMetadata: {
         title: config.siteTitle,
         siteUrl: config.siteUrl,
     },
-    pathPrefix: '/gatsby-starter-skeleton-markdown',
     plugins: [
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sharp',
@@ -64,6 +64,5 @@ module.exports = {
             },
         },
         'gatsby-plugin-offline',
-        'gatsby-plugin-sitemap',
     ],
 };
