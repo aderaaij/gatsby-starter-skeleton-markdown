@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children }) => (
         <h1><Link to="/">{config.meta.siteTitle}</Link></h1>
         <nav>
             <ul>
-                <li><Link to="posts">Posts</Link></li>
+                <li><Link to="/posts">Posts</Link></li>
             </ul>
         </nav>
         {children()}
