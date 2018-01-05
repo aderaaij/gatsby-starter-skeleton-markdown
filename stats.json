@@ -29,16 +29,16 @@
       "component---src-templates-tag-js-942dfdaa219ba71b4eca.js.map"
     ],
     "path---posts": [
-      "path---posts-9fa7935d329cf933c79f.js",
-      "path---posts-9fa7935d329cf933c79f.js.map"
+      "path---posts-5c2a8e0614813cfa8ec7.js",
+      "path---posts-5c2a8e0614813cfa8ec7.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---tags-2018": [
-      "path---tags-2018-e85db68dd62c91edd2d0.js",
-      "path---tags-2018-e85db68dd62c91edd2d0.js.map"
+      "path---tags-2018-b4e646908f72e9d4aef0.js",
+      "path---tags-2018-b4e646908f72e9d4aef0.js.map"
     ],
     "component---src-templates-category-js": [
       "component---src-templates-category-js-7dc9cceaf99c74f5d93d.js",
@@ -53,12 +53,12 @@
       "commons-cd67f879a7483a07d37a.js.map"
     ],
     "path---tags-resolutions": [
-      "path---tags-resolutions-54a8d9af73879d7a9d49.js",
-      "path---tags-resolutions-54a8d9af73879d7a9d49.js.map"
+      "path---tags-resolutions-ac2258fb5f757e5f33af.js",
+      "path---tags-resolutions-ac2258fb5f757e5f33af.js.map"
     ],
     "path---happy-new-year": [
-      "path---happy-new-year-4b06566f62c759a167f4.js",
-      "path---happy-new-year-4b06566f62c759a167f4.js.map"
+      "path---happy-new-year-bc565913a3cc5ec4d03a.js",
+      "path---happy-new-year-bc565913a3cc5ec4d03a.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -69,8 +69,8 @@
       "path---i-shouldve-stayed-in-bed-ecd5a93bdafac260dd9a.js.map"
     ],
     "path---categories-development": [
-      "path---categories-development-499d1bb1ccfec43eb821.js",
-      "path---categories-development-499d1bb1ccfec43eb821.js.map"
+      "path---categories-development-f35a6695067eb2af4697.js",
+      "path---categories-development-f35a6695067eb2af4697.js.map"
     ],
     "component---src-templates-post-js": [
       "component---src-templates-post-js-8d06e21f62cd0052a1c6.js",
@@ -81,9 +81,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-a88ec6b191c75f1158c4.js",
+      "app-ca98f9cdf2adef3a71a4.js",
       "build-js-styles.css",
-      "app-a88ec6b191c75f1158c4.js.map",
+      "app-ca98f9cdf2adef3a71a4.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
