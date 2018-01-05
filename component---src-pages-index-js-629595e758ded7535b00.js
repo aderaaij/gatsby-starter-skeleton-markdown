@@ -1,0 +1,2 @@
+webpackJsonp([35783957827783],{122:function(e,t,l){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var a=l(1),n=u(a),d=l(26),f=u(d),r=l(10),c=u(r),i=function(){return n.default.createElement("div",null,n.default.createElement(f.default,null),n.default.createElement("h2",null,c.default.meta.siteName," homepage"),n.default.createElement("p",null,c.default.meta.siteDescription))};t.default=i,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-index-js-629595e758ded7535b00.js.map
