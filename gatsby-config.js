@@ -5,6 +5,7 @@ module.exports = {
         title: config.siteTitle,
         siteUrl: config.siteUrl,
     },
+    pathPrefix: '/gatsby-starter-skeleton-markdown',
     plugins: [
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sharp',
